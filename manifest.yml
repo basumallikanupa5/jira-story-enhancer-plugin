@@ -1,0 +1,18 @@
+modules:
+  jira:issuePanel:
+    - key: jira-gpt-enhancer-panel
+      function: main
+      title: GPT Story Enhancer
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+
+  function:
+    - key: main
+      handler: src/backend/index.handler
+
+permissions:
+  scopes:
+    - read:jira-work
+    - write:jira-work
+
+app:
+  id: ari:cloud:ecosystem::app/generic-gpt-story-enhancer
